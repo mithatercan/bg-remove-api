@@ -218,9 +218,3 @@ This project is open-source and free to use. Please check the rembg library's li
 
 To modify the background removal logic, edit the Python script generation in `server.js` or create a separate Python script file.
 
-## Troubleshooting
-
-1. **Python not found**: Ensure Python 3 is installed and accessible as `python3`
-2. **Missing dependencies**: Run `pip install -r ../model/requirements.txt`
-3. **Port already in use**: Change the PORT environment variable
-4. **File permissions**: Ensure the API has write permissions for uploads/outputs directories
