@@ -8,4 +8,4 @@ npm install
 
 # Start the server
 echo "Starting the server..."
-node server.js
+npm start
