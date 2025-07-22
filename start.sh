@@ -1,5 +1,3 @@
-#!/bin/bash
-
 # Install Python requirements
 echo "Installing Python requirements..."
 pip install -r requirements.txt
