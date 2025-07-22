@@ -255,8 +255,7 @@ const startServer = async () => {
   
   app.listen(PORT, () => {
     console.log(`🚀 Background Remover API running on port ${PORT}`);
-    console.log(`📋 API Documentation: http://localhost:${PORT}`);
-    console.log(`🏥 Health Check: http://localhost:${PORT}/health`);
+    console.log(`🏥 Health Check: ${PORT}/health`);
   });
 };
 
