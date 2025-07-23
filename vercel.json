@@ -4,16 +4,17 @@
     {
       "src": "./server.js",
       "use": "@vercel/node"
-    },
-    {
-      "src": "./model.py",
-      "use": "@vercel/python"
     }
-  ],  
+  ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "/"
+      "dest": "/server.js"
     }
-  ]
+  ],
+  "functions": {
+    "server.js": {
+      "maxDuration": 30
+    }
+  }
 }
