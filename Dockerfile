@@ -1,22 +1,20 @@
 FROM node:18
 
 # Install Python and pip
-RUN apt-get update && apt-get install -y python3 python3-pip
+RUN apt-get update && apt-get install -y python3 python3-pip python3-venv
 
-# Set working directory
 WORKDIR /app
 
-# Copy all files
 COPY . .
 
-# Install Python dependencies
-RUN pip3 install -r requirements.txt
+# Create and activate Python virtual environment, then install requirements
+RUN python3 -m venv /app/venv \
+    && . /app/venv/bin/activate \
+    && /app/venv/bin/pip install --upgrade pip \
+    && /app/venv/bin/pip install -r requirements.txt
 
-# Install Node.js dependencies
 RUN npm install
 
-# Expose port (change if your server uses a different port)
 EXPOSE 3000
 
-# Start the server (update if you use a different start command)
 CMD ["npm", "start"]
