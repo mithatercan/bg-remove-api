@@ -1,4 +1,4 @@
-git FROM node:18
+FROM node:18
 
 # Install Python and system dependencies
 RUN apt-get update && apt-get install -y \
